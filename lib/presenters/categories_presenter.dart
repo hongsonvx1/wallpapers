@@ -1,6 +1,6 @@
 import 'dart:core';
 
-import 'package:Wallpapers/models/categories_api.dart';
+import 'package:Wallpapers/models/unplash_api.dart';
 import 'package:Wallpapers/models/category.dart';
 
 abstract class CategoriesPresenter {
@@ -8,12 +8,12 @@ abstract class CategoriesPresenter {
 }
 
 class BaseCategoriesPresenter implements CategoriesPresenter {
-  CategotiesAPI _mCategoriesAPI;
+  UnplashAPI _mCategoriesAPI;
 
   BaseCategoriesPresenter(
     this._mCategoriesAPI,
   ) {
-    _mCategoriesAPI = CategotiesAPI();
+    _mCategoriesAPI = UnplashAPI();
   }
 
   @override

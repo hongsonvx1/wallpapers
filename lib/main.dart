@@ -1,5 +1,3 @@
-import 'package:Wallpapers/models/categories_api.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'views/categories_view.dart';

@@ -1,6 +1,7 @@
-import 'package:Wallpapers/models/categories_api.dart';
+import 'package:Wallpapers/models/unplash_api.dart';
 import 'package:Wallpapers/models/category.dart';
 import 'package:Wallpapers/presenters/categories_presenter.dart';
+import 'package:Wallpapers/views/grid_wallpapers_view.dart';
 import 'package:flutter/material.dart';
 
 class TabBarCategories extends StatefulWidget {
@@ -16,7 +17,7 @@ class _TabBarState extends State<TabBarCategories> {
   @override
   void initState() {
     super.initState();
-    _mCategoriesPresenter = BaseCategoriesPresenter(CategotiesAPI());
+    _mCategoriesPresenter = BaseCategoriesPresenter(UnplashAPI());
   }
 
   @override
@@ -41,9 +42,7 @@ class _TabBarState extends State<TabBarCategories> {
                 ),
               ),
               body: TabBarView(
-                children: categories
-                    .map((e) => Text('${e.title} this is content'))
-                    .toList(),
+                children: categories.map((e) => GridWallpapers(e)).toList(),
               ),
             ),
           );
